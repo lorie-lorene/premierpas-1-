@@ -3,6 +3,7 @@ package com.openf.premierpas.service;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.service.annotation.DeleteExchange;
 
 import com.openf.premierpas.model.Customer;
 
@@ -15,6 +16,10 @@ public interface CustomerService {
     @GetMapping("")
     String getStudent();
 
+    @DeleteExchange("/delete/{id}")
+    public void deleteById(@PathVariable (name="id") String id);
+
     @GetMapping("{id}")
     String getStudentById(@PathVariable (name="id") String id);
+    /* il suffit d'importer les mapping de l'application serveur afin d'avoir ses données */
 }

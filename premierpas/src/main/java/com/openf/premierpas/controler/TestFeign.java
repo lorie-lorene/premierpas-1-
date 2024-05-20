@@ -6,8 +6,6 @@ import com.openf.premierpas.service.CustomerService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -27,5 +25,10 @@ public class TestFeign {
     @GetMapping("/customerStudent/{id}")
     public String getStudentById(@PathVariable String id) {
         return service.getStudentById(id);
+    }
+     @GetMapping("/customerDelete/{id}")
+    public String getDelById(@PathVariable String id) {
+        service.deleteById(id);
+        return "deleted";
     }
 }
