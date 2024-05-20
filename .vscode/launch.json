@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-PremierpasApplication<premierpas>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.openf.premierpas.PremierpasApplication",
+            "projectName": "premierpas",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
